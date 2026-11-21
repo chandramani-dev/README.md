@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ganga Rakshak — learn, report, and take action to protect the Ganga.">
+  <title>Ganga Rakshak | Protect Our River</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="js/config.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Ganga Rakshak home"><span class="brand-mark">GR</span><span>Ganga <b>Rakshak</b></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav" class="main-nav">
+      <a href="#about">About</a><a href="#actions">Take action</a><a href="#report">Report an issue</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">OUR RIVER. OUR RESPONSIBILITY.</p>
+        <h1>A cleaner Ganga<br><span>starts with us.</span></h1>
+        <p class="hero-copy">Small actions create lasting change. Learn how to protect the river, spread awareness, and report pollution concerns in your area.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#report">Report an issue <span>↗</span></a><a class="text-link" href="#about">Discover our mission ↓</a></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Illustration of a flowing river and mountains">
+        <div class="sun"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+        <div class="river river-one"></div><div class="river river-two"></div>
+        <div class="art-label"><span class="pulse"></span> Every drop matters</div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Project principles">
+      <div><strong>01</strong><span>Learn about river health</span></div>
+      <div><strong>02</strong><span>Report local concerns</span></div>
+      <div><strong>03</strong><span>Inspire collective action</span></div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading"><p class="eyebrow">WHY IT MATTERS</p><h2>A river is more than water.</h2></div>
+      <div class="about-grid">
+        <p class="large-copy">The Ganga supports communities, ecosystems, agriculture, and cultural life. Protecting it requires awareness, responsible habits, and cooperation.</p>
+        <div class="info-card"><span class="card-icon">♻</span><h3>Reduce waste</h3><p>Choose reusable items and dispose of waste responsibly. Never leave litter near drains or riverbanks.</p></div>
+        <div class="info-card"><span class="card-icon">💧</span><h3>Save water</h3><p>Use water thoughtfully at home and encourage practices that reduce unnecessary water use.</p></div>
+        <div class="info-card"><span class="card-icon">🌱</span><h3>Spread awareness</h3><p>Share reliable information and support community-led river conservation activities.</p></div>
+      </div>
+    </section>
+
+    <section class="action-band" id="actions">
+      <div><p class="eyebrow">BE PART OF THE CHANGE</p><h2>Notice something?<br>Let your community know.</h2></div>
+      <a class="button button-light" href="#report">Share a report <span>↗</span></a>
+    </section>
+
+    <section class="section report-section" id="report">
+      <div class="section-heading"><p class="eyebrow">COMMUNITY REPORTING</p><h2>Report a concern</h2><p class="section-intro">Use this demo form to share an observation related to river pollution or waste. Do not submit emergency reports or sensitive personal information.</p></div>
+      <form id="reportForm" class="report-form">
+        <div class="form-row">
+          <label>Your name<input name="name" type="text" maxlength="80" placeholder="Enter your name" required></label>
+          <label>Email address<input name="email" type="email" maxlength="120" placeholder="you@example.com" required></label>
+        </div>
+        <div class="form-row">
+          <label>Location<input name="location" type="text" maxlength="120" placeholder="e.g. Ghat or locality, city" required></label>
+          <label>Type of concern<select name="category" required><option value="">Choose a category</option><option>Plastic or solid waste</option><option>Water pollution concern</option><option>Drainage or sewage concern</option><option>Other observation</option></select></label>
+        </div>
+        <label>What did you observe?<textarea name="message" rows="5" maxlength="1500" placeholder="Describe what you noticed..." required></textarea></label>
+        <button class="button button-primary submit-button" type="submit">Submit report <span>↗</span></button>
+        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        <p class="form-note">For a college demonstration only. Reports are not verified or forwarded to government authorities.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">GR</span><span>Ganga <b>Rakshak</b></span></a><p>Awareness today. A healthier river tomorrow.</p><span>College project · <span id="year"></span></span></footer>
+</body>
+</html>
